@@ -8,5 +8,4 @@ require "active_record"
 # Now we can load the parts of PT that depend on AR.
 require "paper_trail/has_paper_trail"
 require "paper_trail/reifier"
-require "paper_trail/frameworks/active_record/models/paper_trail/version"
 ActiveRecord::Base.include PaperTrail::Model

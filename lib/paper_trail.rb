@@ -135,4 +135,5 @@ if defined?(Rails)
   require "paper_trail/frameworks/rails"
 else
   require "paper_trail/frameworks/active_record"
+  require "paper_trail/frameworks/active_record/models/paper_trail/version"
 end

@@ -4,7 +4,9 @@ module PaperTrail
   # Represents code to load within Rails framework. See documentation in
   # `railties/lib/rails/railtie.rb`.
   # @api private
-  class Railtie < ::Rails::Railtie
+  class Engine < ::Rails::Engine
+    paths["app/models"] << "lib/paper_trail/frameworks/active_record/models"
+
     # PaperTrail only has one initializer.
     #
     # We specify `before: "load_config_initializers"` to ensure that the PT
